@@ -15,7 +15,8 @@ select
             )
         );
 ;
-set hive.support.quoted.identifiers=None;
+-- set hive.support.quoted.identifiers=None;
+set spark.sql.parser.quotedRegexColumnNames=true;
 select
     tmp.`^((?!flag).)*$`
 from(
